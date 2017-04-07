@@ -402,9 +402,6 @@ void SetUpEnvironmentMap(void)
     //GenerateCubeMap();
     envmapshader = new STShaderProgram();
     envmapshader->LoadVertexShader(envmapVertexShader);
-
-    std::cout << "Print" << std::endl;
-
     envmapshader->LoadFragmentShader(envmapFragmentShader);
 
 }
@@ -509,7 +506,7 @@ void ReflectanceMapping(void)
     // 3. you must determine the correct order to bind and unbind
     //   your shaders and textures.
     //----------------------------------------------------------
-
+    	envmapshader->UnBind();
     //----------------------------------------------------------
 
     // done with front frame buffer so swap to 
