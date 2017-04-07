@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<scene>
+  <texture>
+    <name>RobotHead</name>
+    <data>
+      <file>data/textures/RobotHead2.png</file>
+    </data>
+  </texture>
+  <texture>
+    <name>Robot-texture</name>
+    <data>
+      <file>data/textures/Battered-Robot.jpg</file>
+    </data>
+  </texture>
+  <mesh>
+    <name>RobotHead.obj</name>
+    <data>
+      <file>data/meshes/RobotHead.obj</file>
+    </data>
+  </mesh>
+  <material>
+    <name>RobotHead</name>
+    <data>
+      <type>Ambient</type>
+      <diffuse>
+        <texture>RobotHead</texture>
+      </diffuse>
+      <normal>
+        <color>128 128 128 255 </color>
+      </normal>
+      <specular>
+        <color>255 255 255 255 </color>
+      </specular>
+    </data>
+  </material>
+  <material>
+    <name>Robot</name>
+    <data>
+      <type>Ambient</type>
+      <diffuse>
+        <texture>Robot-texture</texture>
+      </diffuse>
+      <normal>
+        <color>128 128 128 255 </color>
+      </normal>
+      <specular>
+        <color>255 255 255 255 </color>
+      </specular>
+    </data>
+  </material>
+  <object>
+    <name>RShin</name>
+    <data>
+      <matrix>1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 -2.0 0.0 1.0</matrix>
+      <parent>RLeg</parent>
+      <mesh>Cylinder</mesh>
+      <material>Robot</material>
+    </data>
+  </object>
+  <object>
+    <name>Head</name>
+    <data>
+      <matrix>-0.9996902 0.0 0.024921613 0.0 0.0 0.9999112 0.0 0.0 -0.024923507 0.0 -0.99960196 0.0 0.0 2.0 0.0 1.0</matrix>
+      <parent>Torso</parent>
+      <mesh>RobotHead.obj</mesh>
+      <material>RobotHead</material>
+    </data>
+  </object>
+  <object>
+    <name>LShin</name>
+    <data>
+      <matrix>1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 -2.0 0.0 1.0</matrix>
+      <parent>LLeg</parent>
+      <mesh>Cylinder</mesh>
+      <material>Robot</material>
+    </data>
+  </object>
+  <object>
+    <name>LShoulder</name>
+    <data>
+      <matrix>0.4883098 0.10748774 0.0 0.0 -0.10748774 0.4883098 0.0 0.0 0.0 0.0 0.5 0.0 1.2061408 0.5881014 0.0 1.0</matrix>
+      <parent>Torso</parent>
+      <mesh>Sphere</mesh>
+      <material>Robot</material>
+    </data>
+  </object>
+  <object>
+    <name>LForearm</name>
+    <data>
+      <matrix>1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 -2.0 0.0 1.0</matrix>
+      <parent>LArm</parent>
+      <mesh>Cylinder</mesh>
+      <material>Robot</material>
+    </data>
+  </object>
+  <object>
+    <name>Camera2</name>
+    <data type="cs4620.common.SceneCamera">
+      <matrix>0.9893638 0.0010436289 -0.14546184 0.0 -0.03133501 0.9780245 -0.20610483 0.0 0.14205077 0.20847008 0.96765757 0.0 0.45825598 5.7052865 5.2028685 1.0</matrix>
+      <parent>World</parent>
+      <zPlanes>0.01 1000.0</zPlanes>
+      <perspective>0.02 0.02</perspective>
+    </data>
+  </object>
+  <object>
+    <name>Camera1</name>
+    <data type="cs4620.common.SceneCamera">
+      <matrix>0.9340311 -9.780144E-5 -0.35719225 0.0 -0.10915293 0.95208615 -0.28568676 0.0 0.34010646 0.3058289 0.88926697 0.0 2.9667344 7.207859 5.917903 1.0</matrix>
+      <parent>World</parent>
+      <zPlanes>0.01 1000.0</zPlanes>
+      <perspective>0.02 0.02</perspective>
+    </data>
+  </object>
+  <object>
+    <name>LLeg</name>
+    <data>
+      <matrix>0.5 0.0 0.0 0.0 0.0 0.8 0.0 0.0 0.0 0.0 0.5 0.0 0.5554026 -1.6 0.0 1.0</matrix>
+      <parent>Torso</parent>
+      <mesh>Cylinder</mesh>
+      <material>Robot</material>
+    </data>
+  </object>
+  <object>
+    <name>Camera3</name>
+    <data type="cs4620.common.SceneCamera">
+      <matrix>0.8962608 -0.037939556 0.44190133 0.0 0.06042117 0.9974901 -0.03690601 0.0 -0.43939218 0.059777614 0.89630413 0.0 -3.412871 3.959823 4.839567 1.0</matrix>
+      <parent>World</parent>
+      <zPlanes>0.01 1000.0</zPlanes>
+      <perspective>0.02 0.02</perspective>
+    </data>
+  </object>
+  <object>
+    <name>RArm</name>
+    <data>
+      <matrix>0.8 0.0 0.0 0.0 0.0 1.4 0.0 0.0 0.0 0.0 0.8 0.0 -0.1269803 -1.2130644 0.0 1.0</matrix>
+      <parent>RShoulder</parent>
+      <mesh>Cylinder</mesh>
+      <material>Robot</material>
+    </data>
+  </object>
+  <object>
+    <name>RShoulder</name>
+    <data>
+      <matrix>0.4938765 -0.07801328 0.0 0.0 0.07801328 0.4938765 0.0 0.0 0.0 0.0 0.5 0.0 -1.2061408 0.5881014 0.0 1.0</matrix>
+      <parent>Torso</parent>
+      <mesh>Sphere</mesh>
+      <material>Robot</material>
+    </data>
+  </object>
+  <object>
+    <name>LArm</name>
+    <data>
+      <matrix>0.8 0.0 0.0 0.0 0.0 1.4 0.0 0.0 0.0 0.0 0.8 0.0 0.13120575 -1.2130644 0.0 1.0</matrix>
+      <parent>LShoulder</parent>
+      <mesh>Cylinder</mesh>
+      <material>Robot</material>
+    </data>
+  </object>
+  <object>
+    <name>Torso</name>
+    <data>
+      <matrix>0.9998612 0.0 0.0 0.0 0.0 0.9998612 0.0 0.0 0.0 0.0 0.997993 0.0 0.0 4.3406177 0.0 1.0</matrix>
+      <parent>World</parent>
+      <mesh>Cube</mesh>
+      <material>Robot</material>
+    </data>
+  </object>
+  <object>
+    <name>RFoot</name>
+    <data>
+      <matrix>1.0 0.0 0.0 0.0 0.0 0.29258114 0.0 0.0 0.0 0.0 1.6827953 0.0 0.0 -1.1498967 0.8047716 1.0</matrix>
+      <parent>RShin</parent>
+      <mesh>Cube</mesh>
+      <material>Robot</material>
+    </data>
+  </object>
+  <object>
+    <name>RForearm</name>
+    <data>
+      <matrix>1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 -2.0 0.0 1.0</matrix>
+      <parent>RArm</parent>
+      <mesh>Cylinder</mesh>
+      <material>Robot</material>
+    </data>
+  </object>
+  <object>
+    <name>RLeg</name>
+    <data>
+      <matrix>0.5 0.0 0.0 0.0 0.0 0.8 0.0 0.0 0.0 0.0 0.5 0.0 -0.5554026 -1.6 0.0 1.0</matrix>
+      <parent>Torso</parent>
+      <mesh>Cylinder</mesh>
+      <material>Robot</material>
+    </data>
+  </object>
+  <object>
+    <name>LFoot</name>
+    <data>
+      <matrix>1.0 0.0 0.0 0.0 0.0 0.29258114 0.0 0.0 0.0 0.0 1.6827953 0.0 0.0 -1.1498967 0.8047716 1.0</matrix>
+      <parent>LShin</parent>
+      <mesh>Cube</mesh>
+      <material>Robot</material>
+    </data>
+  </object>
+</scene>

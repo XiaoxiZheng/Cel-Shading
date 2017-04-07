@@ -1,0 +1,61 @@
+﻿Build started 3/9/2015 3:13:10 PM.
+     1>Project "C:\UF\teaching\CIS4390_6390\assignments\solution2\sample\assignment3\libst\vc2008\libst.vcxproj" on node 2 (Build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Release\libst.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I../include /I../ext/libpng/include /I../ext/libjpeg/include /I../ext/zlib/include/ /I../ext/freetype/include /I../ext/glew/include /Zi /nologo /W3 /WX- /O2 /Oy- /D WIN32 /D NDEBUG /D _LIB /D _CRT_SECURE_NO_WARNINGS /D _CRT_SECURE_NO_DEPRECATE /D _MBCS /Gm- /EHsc /MD /GS /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ..\STColor3f.cpp ..\STColor4f.cpp ..\STColor4ub.cpp ..\STFont.cpp ..\STImage.cpp ..\STImage_jpeg.cpp ..\STImage_png.cpp ..\STImage_ppm.cpp ..\STJoystick.cpp ..\STJoystick_win32.cpp ..\STPoint2.cpp ..\STPoint3.cpp ..\STShaderProgram.cpp ..\STShape.cpp ..\STTexture.cpp ..\STTimer.cpp ..\STTriangleMesh.cpp ..\STVector2.cpp ..\STVector3.cpp ..\tiny_obj_loader.cpp
+         STColor3f.cpp
+         STColor4f.cpp
+         STColor4ub.cpp
+         STFont.cpp
+         STImage.cpp
+         STImage_jpeg.cpp
+         STImage_png.cpp
+         STImage_ppm.cpp
+         STJoystick.cpp
+         STJoystick_win32.cpp
+         STPoint2.cpp
+         STPoint3.cpp
+         STShaderProgram.cpp
+         STShape.cpp
+         STTexture.cpp
+         STTimer.cpp
+         STTriangleMesh.cpp
+     1>..\STTriangleMesh.cpp(358): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         STVector2.cpp
+         STVector3.cpp
+         tiny_obj_loader.cpp
+         Generating Code...
+       MakeDirsForLib:
+         Creating directory "C:\UF\teaching\CIS4390_6390\assignments\solution2\sample\assignment3\libst\vc2008\..\lib\Release".
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppBuild.targets(1299,5): warning MSB8012: TargetPath(C:\UF\teaching\CIS4390_6390\assignments\solution2\sample\assignment3\libst\vc2008\../lib\libst.lib) does not match the Library's OutputFile property value (C:\UF\teaching\CIS4390_6390\assignments\solution2\sample\assignment3\libst\lib\Release\libst.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\Lib.exe /OUT:"../lib\Release/libst.lib" /NOLOGO Release\STColor3f.obj
+         Release\STColor4f.obj
+         Release\STColor4ub.obj
+         Release\STFont.obj
+         Release\STImage.obj
+         Release\STImage_jpeg.obj
+         Release\STImage_png.obj
+         Release\STImage_ppm.obj
+         Release\STJoystick.obj
+         Release\STJoystick_win32.obj
+         Release\STPoint2.obj
+         Release\STPoint3.obj
+         Release\STShaderProgram.obj
+         Release\STShape.obj
+         Release\STTexture.obj
+         Release\STTimer.obj
+         Release\STTriangleMesh.obj
+         Release\STVector2.obj
+         Release\STVector3.obj
+         Release\tiny_obj_loader.obj
+         libst.vcxproj -> C:\UF\teaching\CIS4390_6390\assignments\solution2\sample\assignment3\libst\vc2008\../lib\libst.lib
+       FinalizeBuildStatus:
+         Deleting file "Release\libst.unsuccessfulbuild".
+         Touching "Release\libst.lastbuildstate".
+     1>Done Building Project "C:\UF\teaching\CIS4390_6390\assignments\solution2\sample\assignment3\libst\vc2008\libst.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:13.03

@@ -1,0 +1,19 @@
+﻿Build started 3/9/2017 10:56:18 PM.
+     1>Project "C:\UF_Teaching\CAP4730\prog\proj4\prog4_GLSLshaders_submit\src\libst\vc2008\libst.vcxproj" on node 2 (Build target(s)).
+       Project file contains ToolsVersion="12.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="4.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=291333.
+     1>InitializeBuildStatus:
+         Creating "Debug\libst.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppBuild.targets(1299,5): warning MSB8012: TargetPath(C:\UF_Teaching\CAP4730\prog\proj4\prog4_GLSLshaders_submit\src\libst\vc2008\../lib\libst.lib) does not match the Library's OutputFile property value (C:\UF_Teaching\CAP4730\prog\proj4\prog4_GLSLshaders_submit\src\libst\lib\Debug\libst.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+       Lib:
+         All outputs are up-to-date.
+         libst.vcxproj -> C:\UF_Teaching\CAP4730\prog\proj4\prog4_GLSLshaders_submit\src\libst\vc2008\../lib\libst.lib
+       FinalizeBuildStatus:
+         Deleting file "Debug\libst.unsuccessfulbuild".
+         Touching "Debug\libst.lastbuildstate".
+     1>Done Building Project "C:\UF_Teaching\CAP4730\prog\proj4\prog4_GLSLshaders_submit\src\libst\vc2008\libst.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.03

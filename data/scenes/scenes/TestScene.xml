@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<scene>
+	<material>
+		<name>Earth</name>
+		<data>
+			<type>Ambient</type>
+			<diffuse>
+				<texture>Checker Board</texture>
+			</diffuse>
+		</data>
+	</material>
+	
+	<object>
+		<name>Earth</name>
+		<data>
+			<mesh>Sphere</mesh>
+			<material>Earth</material>
+		</data>
+	</object>
+	<object>
+		<name>Camera</name>
+		<data type="SceneCamera">
+			<zPlanes>0.02 1000.0</zPlanes>
+			<perspective>0.01 0.01</perspective>
+			
+			<translation>0 0 10</translation>
+		</data>
+	</object>
+  
+  <object>
+		<name>Ground</name>
+		<data>
+			<mesh>Cube</mesh>
+			<material>Generic</material>
+      <scale>100 0.01 100</scale>
+		</data>
+	</object>
+</scene>

@@ -1,0 +1,83 @@
+﻿Build started 3/9/2017 10:56:18 PM.
+     1>Project "C:\UF_Teaching\CAP4730\prog\proj4\prog4_GLSLshaders_submit\src\mainsrc\proj4_GLSLShaders.vcxproj" on node 2 (Build target(s)).
+       Project file contains ToolsVersion="12.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="4.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=291333.
+     1>Project "C:\UF_Teaching\CAP4730\prog\proj4\prog4_GLSLshaders_submit\src\mainsrc\proj4_GLSLShaders.vcxproj" (1) is building "C:\UF_Teaching\CAP4730\prog\proj4\prog4_GLSLshaders_submit\src\libst\vc2008\libst.vcxproj" (2) on node 2 (GetTargetPath target(s)).
+       Project file contains ToolsVersion="12.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="4.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=291333.
+     2>Done Building Project "C:\UF_Teaching\CAP4730\prog\proj4\prog4_GLSLshaders_submit\src\libst\vc2008\libst.vcxproj" (GetTargetPath target(s)).
+     1>Project "C:\UF_Teaching\CAP4730\prog\proj4\prog4_GLSLshaders_submit\src\mainsrc\proj4_GLSLShaders.vcxproj" (1) is building "C:\UF_Teaching\CAP4730\prog\proj4\prog4_GLSLshaders_submit\src\libst\vc2008\libst.vcxproj" (2:2) on node 2 (GetNativeManifest target(s)).
+       Project file contains ToolsVersion="12.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="4.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=291333.
+     2>Done Building Project "C:\UF_Teaching\CAP4730\prog\proj4\prog4_GLSLshaders_submit\src\libst\vc2008\libst.vcxproj" (GetNativeManifest target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\proj4_GLSLShaders.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\include /IC:\UF_Teaching\CAP4730\prog\proj4\prog4_GLSLshaders_submit\src\mainsrc\/../libst/include /IC:\UF_Teaching\CAP4730\prog\proj4\prog4_GLSLshaders_submit\src\mainsrc\/../libst/ext/glew/include /IC:\UF_Teaching\CAP4730\prog\proj4\prog4_GLSLshaders_submit\src\mainsrc\/include /IC:\UF_Teaching\CAP4730\prog\proj4\prog4_GLSLshaders_submit\src\mainsrc\..\librt\include /I..\libst\ext\glew\include /I"..\libigl\libigl-master\include" /I..\libst\ext\glew\include\GL /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _CRT_SECURE_NO_WARNINGS /D NOMINMAX /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\stglew.h(22): warning C4005: 'GLEW_STATIC' : macro redefinition
+                 c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\main.cpp(20) : see previous definition of 'GLEW_STATIC'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\libst\include\stmatrix4.inl(271): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(81): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(82): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(83): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(84): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(85): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(86): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(87): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(88): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(89): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(90): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(91): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(92): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(93): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(94): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(95): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(96): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(97): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(98): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(99): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(100): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(101): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(102): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(103): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(104): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(105): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(106): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(107): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(108): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(109): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(110): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(111): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(112): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(113): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(114): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(115): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(116): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(117): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(118): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(119): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(120): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\utilities.h(121): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\main.cpp(69): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\main.cpp(314): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\main.cpp(638): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\uf_teaching\cap4730\prog\proj4\prog4_glslshaders_submit\src\mainsrc\main.cpp(658): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>Project "C:\UF_Teaching\CAP4730\prog\proj4\prog4_GLSLshaders_submit\src\mainsrc\proj4_GLSLShaders.vcxproj" (1) is building "C:\UF_Teaching\CAP4730\prog\proj4\prog4_GLSLshaders_submit\src\libst\vc2008\libst.vcxproj" (2:3) on node 2 (GetResolvedLinkLibs target(s)).
+       Project file contains ToolsVersion="12.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="4.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=291333.
+     2>Done Building Project "C:\UF_Teaching\CAP4730\prog\proj4\prog4_GLSLshaders_submit\src\libst\vc2008\libst.vcxproj" (GetResolvedLinkLibs target(s)).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\UF_Teaching\CAP4730\prog\proj4\prog4_GLSLshaders_submit\src\mainsrc\Debug\proj4_GLSLShaders.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:../libst/lib/Debug/ /LIBPATH:..\lib /LIBPATH:../libst/lib/Debug /LIBPATH:../librt/lib/Debug /LIBPATH:..\libst\ext\vc2008\lib\Debug glut32.lib libpng.lib jpeg.lib zlib.lib freetype231.lib glew.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\UF_Teaching\CAP4730\prog\proj4\prog4_GLSLshaders_submit\src\mainsrc\Debug\proj4_GLSLShaders.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\UF_Teaching\CAP4730\prog\proj4\prog4_GLSLshaders_submit\src\mainsrc\Debug\proj4_GLSLShaders.lib" /MACHINE:X86 /SAFESEH Debug\main.obj
+         Debug\utilities.obj
+         C:\UF_Teaching\CAP4730\prog\proj4\prog4_GLSLshaders_submit\src\libst\lib\Debug\libst.lib
+     1>main.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:LBR' specification
+     1>LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+     1>LINK : warning LNK4098: defaultlib 'LIBCMTD' conflicts with use of other libs; use /NODEFAULTLIB:library
+     1>MSVCRTD.lib(cinitexe.obj) : warning LNK4098: defaultlib 'msvcrt.lib' conflicts with use of other libs; use /NODEFAULTLIB:library
+     1>glew.lib(glew.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'glew.lib(glew.obj)' or at 'C:\UF_Teaching\CAP4730\prog\proj4\prog4_GLSLshaders_submit\src\mainsrc\Debug\vc100.pdb'; linking object as if no debug info
+         proj4_GLSLShaders.vcxproj -> C:\UF_Teaching\CAP4730\prog\proj4\prog4_GLSLshaders_submit\src\mainsrc\Debug\proj4_GLSLShaders.exe
+       FinalizeBuildStatus:
+         Deleting file "Debug\proj4_GLSLShaders.unsuccessfulbuild".
+         Touching "Debug\proj4_GLSLShaders.lastbuildstate".
+     1>Done Building Project "C:\UF_Teaching\CAP4730\prog\proj4\prog4_GLSLshaders_submit\src\mainsrc\proj4_GLSLShaders.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.65

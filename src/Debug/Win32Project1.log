@@ -1,0 +1,16 @@
+﻿Build started 9/13/2015 11:08:14 PM.
+     1>Project "C:\cygwin\home\Corey\environmentmap\proj2_raytracer\src\Win32Project1\Win32Project1.vcxproj" on node 2 (Build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\rtlib.unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I./include/ /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ..\rtlib\Camera.cpp ..\rtlib\Scene.cpp
+         Scene.cpp
+     1>c:\cygwin\home\corey\environmentmap\proj2_raytracer\src\rtlib\scene.cpp(2): fatal error C1083: Cannot open include file: 'Scene.h': No such file or directory
+         Camera.cpp
+     1>c:\cygwin\home\corey\environmentmap\proj2_raytracer\src\rtlib\camera.cpp(3): fatal error C1083: Cannot open include file: 'Camera.h': No such file or directory
+         Generating Code...
+     1>Done Building Project "C:\cygwin\home\Corey\environmentmap\proj2_raytracer\src\Win32Project1\Win32Project1.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.10
