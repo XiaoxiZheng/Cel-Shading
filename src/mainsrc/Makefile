@@ -1,6 +1,6 @@
 
 # the name of the compiled binary
-TARGET  := prog4_GLSLshaders
+TARGET  := Cel-Shading
 
 # list files to compile and link together
 FILES   := main utilities
