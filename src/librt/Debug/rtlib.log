@@ -1,0 +1,104 @@
+﻿Build started 3/7/2017 7:20:19 PM.
+     1>Project "C:\UF_Teaching\CAP4730\prog\proj3\4730_proj3_sceneManip_submit\src\librt\rtlib.vcxproj" on node 3 (Rebuild target(s)).
+       Project file contains ToolsVersion="12.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="4.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=291333.
+     1>_PrepareForClean:
+         Deleting file "Debug\librt.lastbuildstate".
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppBuild.targets(346,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+       InitializeBuildStatus:
+         Creating "Debug\librt.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I./include/ /I..\src\libst\include /I..\src\include /I"..\src\libigl\libigl-master\include" /I../include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D GLUT_BUILDING_LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Camera.cpp CameraNode.cpp GeometryNode.cpp Intersection.cpp Light.cpp LightNode.cpp LinearSolver.cpp Ray.cpp RayTracer.cpp RGBR_f.cpp Scene.cpp SceneNode.cpp Shader.cpp Sphere.cpp Surface.cpp SurfaceNode.cpp TransformNode.cpp Triangle.cpp TriangleMeshNode.cpp utilities.cpp
+         utilities.cpp
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\libst\include\stmatrix4.inl(271): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\librt\utilities.cpp(158): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\librt\utilities.cpp(262): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\librt\utilities.cpp(263): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\librt\utilities.cpp(269): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\librt\utilities.cpp(275): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\librt\utilities.cpp(276): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\librt\utilities.cpp(277): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\librt\utilities.cpp(280): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\librt\utilities.cpp(281): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\librt\utilities.cpp(282): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\librt\utilities.cpp(285): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\librt\utilities.cpp(286): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\librt\utilities.cpp(287): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\librt\utilities.cpp(327): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+         TriangleMeshNode.cpp
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\libst\include\stmatrix4.inl(271): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         Triangle.cpp
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\libst\include\stmatrix4.inl(271): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         TransformNode.cpp
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\libst\include\stmatrix4.inl(271): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         SurfaceNode.cpp
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\libst\include\stmatrix4.inl(271): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         Surface.cpp
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\libst\include\stmatrix4.inl(271): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         Sphere.cpp
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\libst\include\stmatrix4.inl(271): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         Shader.cpp
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\libst\include\stmatrix4.inl(271): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         SceneNode.cpp
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\libst\include\stmatrix4.inl(271): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         Scene.cpp
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\libst\include\stmatrix4.inl(271): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\librt\scene.cpp(124): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\librt\scene.cpp(297): warning C4101: 'gmasscentervec4_new' : unreferenced local variable
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\librt\scene.cpp(761): warning C4244: 'argument' : conversion from 'GLdouble' to 'float', possible loss of data
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\librt\scene.cpp(813): warning C4244: 'argument' : conversion from 'GLdouble' to 'float', possible loss of data
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\librt\scene.cpp(814): warning C4244: 'argument' : conversion from 'GLdouble' to 'float', possible loss of data
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\librt\scene.cpp(890): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\librt\scene.cpp(899): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\librt\scene.cpp(908): warning C4305: 'argument' : truncation from 'double' to 'float'
+         RGBR_f.cpp
+         RayTracer.cpp
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\libst\include\stmatrix4.inl(271): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\librt\raytracer.cpp(21): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\librt\raytracer.cpp(54): warning C4244: 'argument' : conversion from 'float' to 'STColor4ub::Component', possible loss of data
+         Ray.cpp
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\libst\include\stmatrix4.inl(271): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         LinearSolver.cpp
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\libst\include\stmatrix4.inl(271): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         LightNode.cpp
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\libst\include\stmatrix4.inl(271): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         Light.cpp
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\libst\include\stmatrix4.inl(271): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         Intersection.cpp
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\libst\include\stmatrix4.inl(271): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         GeometryNode.cpp
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\libst\include\stmatrix4.inl(271): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         CameraNode.cpp
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\libst\include\stmatrix4.inl(271): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         Camera.cpp
+     1>c:\uf_teaching\cap4730\prog\proj3\4730_proj3_scenemanip_submit\src\libst\include\stmatrix4.inl(271): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\Lib.exe /OUT:"./lib/Debug\librt.lib" /NOLOGO Debug\Camera.obj
+         Debug\CameraNode.obj
+         Debug\GeometryNode.obj
+         Debug\Intersection.obj
+         Debug\Light.obj
+         Debug\LightNode.obj
+         Debug\LinearSolver.obj
+         Debug\Ray.obj
+         Debug\RayTracer.obj
+         Debug\RGBR_f.obj
+         Debug\Scene.obj
+         Debug\SceneNode.obj
+         Debug\Shader.obj
+         Debug\Sphere.obj
+         Debug\Surface.obj
+         Debug\SurfaceNode.obj
+         Debug\TransformNode.obj
+         Debug\Triangle.obj
+         Debug\TriangleMeshNode.obj
+         Debug\utilities.obj
+         rtlib.vcxproj -> C:\UF_Teaching\CAP4730\prog\proj3\4730_proj3_sceneManip_submit\src\librt\./lib/Debug\librt.lib
+       FinalizeBuildStatus:
+         Deleting file "Debug\librt.unsuccessfulbuild".
+         Touching "Debug\librt.lastbuildstate".
+     1>Done Building Project "C:\UF_Teaching\CAP4730\prog\proj3\4730_proj3_sceneManip_submit\src\librt\rtlib.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:11.67

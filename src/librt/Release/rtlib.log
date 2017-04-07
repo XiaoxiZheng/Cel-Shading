@@ -1,0 +1,38 @@
+﻿Build started 1/24/2017 2:42:07 PM.
+     1>Project "C:\UF_Teaching\CAP4730\prog\proj2_raytracer\submit\src\librt\rtlib.vcxproj" on node 2 (Build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Release\librt.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I.\include /I..\libst\include /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Intersection.cpp RayTracer.cpp Scene.cpp Shader.cpp Sphere.cpp Surface.cpp Triangle.cpp
+         Intersection.cpp
+         RayTracer.cpp
+     1>RayTracer.cpp(21): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>RayTracer.cpp(54): warning C4244: 'argument' : conversion from 'float' to 'STColor4ub::Component', possible loss of data
+         Scene.cpp
+         Shader.cpp
+         Sphere.cpp
+         Surface.cpp
+         Triangle.cpp
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\Lib.exe /OUT:"lib\Release\librt.lib" /NOLOGO /LTCG Release\Camera.obj
+         Release\Intersection.obj
+         Release\Light.obj
+         Release\LinearSolver.obj
+         Release\Ray.obj
+         Release\RayTracer.obj
+         Release\RGBR_f.obj
+         Release\Scene.obj
+         Release\Shader.obj
+         Release\Sphere.obj
+         Release\Surface.obj
+         Release\Triangle.obj
+         Release\utilities.obj
+         rtlib.vcxproj -> C:\UF_Teaching\CAP4730\prog\proj2_raytracer\submit\src\librt\lib\Release\librt.lib
+       FinalizeBuildStatus:
+         Deleting file "Release\librt.unsuccessfulbuild".
+         Touching "Release\librt.lastbuildstate".
+     1>Done Building Project "C:\UF_Teaching\CAP4730\prog\proj2_raytracer\submit\src\librt\rtlib.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.48

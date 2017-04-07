@@ -1,6 +1,5 @@
 
 
-
 # The following should be correct settings for Linux/Cygwin
 
 CC		 := g++

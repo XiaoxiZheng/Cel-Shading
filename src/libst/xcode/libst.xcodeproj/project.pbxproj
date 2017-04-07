@@ -11,6 +11,8 @@
 		0418D849180393730008B834 /* STTriangleMesh.h in Headers */ = {isa = PBXBuildFile; fileRef = 0418D848180393730008B834 /* STTriangleMesh.h */; };
 		0443524D19E2010C00E466C8 /* tiny_obj_loader.h in Headers */ = {isa = PBXBuildFile; fileRef = 0443524C19E2010C00E466C8 /* tiny_obj_loader.h */; };
 		0443524F19E2011900E466C8 /* tiny_obj_loader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0443524E19E2011900E466C8 /* tiny_obj_loader.cpp */; };
+		B39482151E7C98A200236D81 /* STMatrix4.h in Headers */ = {isa = PBXBuildFile; fileRef = B39482111E7C98A200236D81 /* STMatrix4.h */; };
+		B39482161E7C98A200236D81 /* STVector4.h in Headers */ = {isa = PBXBuildFile; fileRef = B39482131E7C98A200236D81 /* STVector4.h */; };
 		E09A31A30F1F309F00F11EC8 /* STVector3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E09A318F0F1F309F00F11EC8 /* STVector3.cpp */; };
 		E09A31A40F1F309F00F11EC8 /* STColor3f.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E09A31900F1F309F00F11EC8 /* STColor3f.cpp */; };
 		E09A31A50F1F309F00F11EC8 /* STColor4f.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E09A31910F1F309F00F11EC8 /* STColor4f.cpp */; };
@@ -55,6 +57,10 @@
 		0418D848180393730008B834 /* STTriangleMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STTriangleMesh.h; path = ../include/STTriangleMesh.h; sourceTree = "<group>"; };
 		0443524C19E2010C00E466C8 /* tiny_obj_loader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tiny_obj_loader.h; path = ../include/tiny_obj_loader.h; sourceTree = "<group>"; };
 		0443524E19E2011900E466C8 /* tiny_obj_loader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tiny_obj_loader.cpp; path = ../tiny_obj_loader.cpp; sourceTree = "<group>"; };
+		B39482111E7C98A200236D81 /* STMatrix4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STMatrix4.h; path = ../include/STMatrix4.h; sourceTree = "<group>"; };
+		B39482121E7C98A200236D81 /* STMatrix4.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = STMatrix4.inl; path = ../include/STMatrix4.inl; sourceTree = "<group>"; };
+		B39482131E7C98A200236D81 /* STVector4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STVector4.h; path = ../include/STVector4.h; sourceTree = "<group>"; };
+		B39482141E7C98A200236D81 /* STVector4.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = STVector4.inl; path = ../include/STVector4.inl; sourceTree = "<group>"; };
 		D2AAC046055464E500DB518D /* libst.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libst.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E034E63C0F1F3AD70005E446 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 		E09A318F0F1F309F00F11EC8 /* STVector3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = STVector3.cpp; path = ../STVector3.cpp; sourceTree = SOURCE_ROOT; };
@@ -168,6 +174,10 @@
 		E09A31B90F1F310F00F11EC8 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				B39482111E7C98A200236D81 /* STMatrix4.h */,
+				B39482121E7C98A200236D81 /* STMatrix4.inl */,
+				B39482131E7C98A200236D81 /* STVector4.h */,
+				B39482141E7C98A200236D81 /* STVector4.inl */,
 				0443524C19E2010C00E466C8 /* tiny_obj_loader.h */,
 				0418D848180393730008B834 /* STTriangleMesh.h */,
 				E09A31C10F1F312000F11EC8 /* st.h */,
@@ -210,6 +220,7 @@
 				E09A31DA0F1F312000F11EC8 /* STColor4f.h in Headers */,
 				E09A31DB0F1F312000F11EC8 /* STColor4ub.h in Headers */,
 				E09A31DC0F1F312000F11EC8 /* STFont.h in Headers */,
+				B39482161E7C98A200236D81 /* STVector4.h in Headers */,
 				E09A31DD0F1F312000F11EC8 /* stForward.h in Headers */,
 				E09A31DE0F1F312000F11EC8 /* stglut.h in Headers */,
 				E09A31DF0F1F312000F11EC8 /* STImage.h in Headers */,
@@ -223,6 +234,7 @@
 				E09A31E60F1F312000F11EC8 /* STTimer.h in Headers */,
 				E09A31E70F1F312000F11EC8 /* STUtil.h in Headers */,
 				E09A31E80F1F312000F11EC8 /* STVector2.h in Headers */,
+				B39482151E7C98A200236D81 /* STMatrix4.h in Headers */,
 				E09A31E90F1F312000F11EC8 /* STVector3.h in Headers */,
 				E09A31EA0F1F312000F11EC8 /* stgl.h in Headers */,
 			);
@@ -254,7 +266,7 @@
 		08FB7793FE84155DC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0820;
 			};
 			buildConfigurationList = 1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "libst" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -311,9 +323,12 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				HEADER_SEARCH_PATHS = (
+					/usr/local,
+					/usr/local/include,
 					/opt/local/include,
-					"/opt/local/include/freetype2/**",
+					/opt/local/include/freetype2,
 					/sw/include,
+					"../**",
 				);
 				INSTALL_PATH = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = "";
@@ -328,9 +343,12 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
 				HEADER_SEARCH_PATHS = (
+					/usr/local,
+					/usr/local/include,
 					/opt/local/include,
-					"/opt/local/include/freetype2/**",
+					/opt/local/include/freetype2,
 					/sw/include,
+					"../**",
 				);
 				INSTALL_PATH = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = "";
@@ -341,14 +359,33 @@
 		1DEB91F008733DB70010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					"/opt/local/include/**",
-					"/sw/lib/freetype2/include/**",
+					/opt/local/include,
+					/sw/lib/freetype2/include,
 					/sw/include,
 				);
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
 				USER_HEADER_SEARCH_PATHS = ../ext/glew/include;
 			};
 			name = Debug;
@@ -356,13 +393,32 @@
 		1DEB91F108733DB70010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					"/opt/local/include/**",
-					"/sw/lib/freetype2/include/**",
+					/opt/local/include,
+					/sw/lib/freetype2/include,
 					/sw/include,
 				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
 				USER_HEADER_SEARCH_PATHS = ../ext/glew/include;
 			};
 			name = Release;

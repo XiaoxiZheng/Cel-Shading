@@ -75,9 +75,6 @@
     <ClCompile Include="..\tiny_obj_loader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\STVector4.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\st.h">
@@ -143,12 +140,6 @@
     <ClInclude Include="..\include\tiny_obj_loader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\librt\include\RGBR_f.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\STVector4.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\include\STPoint2.inl">
@@ -161,9 +152,6 @@
       <Filter>Header Files</Filter>
     </None>
     <None Include="..\include\STVector3.inl">
-      <Filter>Header Files</Filter>
-    </None>
-    <None Include="..\include\STVector4.inl">
       <Filter>Header Files</Filter>
     </None>
   </ItemGroup>

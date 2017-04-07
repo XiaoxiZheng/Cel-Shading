@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -18,7 +18,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
@@ -45,7 +45,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>../include;../ext/libpng/include;../ext/libjpeg/include;../ext/zlib/include/;../ext/freetype/include;../ext/glew/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../include;../ext/libpng/include;../ext/libjpeg/include;../ext/zlib/include/;../ext/freetype/include;../ext/glew/include;../GL/include;../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -93,11 +93,9 @@
     <ClCompile Include="..\STTriangleMesh.cpp" />
     <ClCompile Include="..\STVector2.cpp" />
     <ClCompile Include="..\STVector3.cpp" />
-    <ClCompile Include="..\STVector4.cpp" />
     <ClCompile Include="..\tiny_obj_loader.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\librt\include\RGBR_f.h" />
     <ClInclude Include="..\include\st.h" />
     <ClInclude Include="..\include\STColor3f.h" />
     <ClInclude Include="..\include\STColor4f.h" />
@@ -118,7 +116,6 @@
     <ClInclude Include="..\include\STUtil.h" />
     <ClInclude Include="..\include\STVector2.h" />
     <ClInclude Include="..\include\STVector3.h" />
-    <ClInclude Include="..\include\STVector4.h" />
     <ClInclude Include="..\include\tiny_obj_loader.h" />
   </ItemGroup>
   <ItemGroup>
@@ -126,7 +123,6 @@
     <None Include="..\include\STPoint3.inl" />
     <None Include="..\include\STVector2.inl" />
     <None Include="..\include\STVector3.inl" />
-    <None Include="..\include\STVector4.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
