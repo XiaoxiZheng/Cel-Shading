@@ -11,7 +11,7 @@
 #include <algorithm>
 #include <stdio.h>
 #include <stdexcept>
-#include<map>
+#include <map>
 #include <stdlib.h>
 #include <assert.h>
 using namespace std;
@@ -138,6 +138,52 @@ static GLenum CubeFaceTarget[6] = {
 // It is optional and not required to test other cube maps
 //------------------------------------------------------------------------------------
 char *cmapFiles[6];
+
+STVector3 mPosition;
+STVector3 mLookAt;
+STVector3 mRight;
+STVector3 mUp;
+
+void SetUpAndRight()
+{
+    mRight = STVector3::Cross(mLookAt - mPosition, mUp);
+    mRight.Normalize();
+    mUp = STVector3::Cross(mRight, mLookAt - mPosition);
+    mUp.Normalize();
+}
+
+void resetCamera()
+{
+    mLookAt=STVector3(0.f,0.f,0.f);
+    mPosition=STVector3(0.f,5.f,15.f);
+    mUp=STVector3(0.f,1.f,0.f);
+
+    SetUpAndRight();
+}
+
+void resetUp()
+{
+    mUp = STVector3(0.f,1.f,0.f);
+    mRight = STVector3::Cross(mLookAt - mPosition, mUp);
+    mRight.Normalize();
+    mUp = STVector3::Cross(mRight, mLookAt - mPosition);
+    mUp.Normalize();
+}
+
+void RotateCamera(float delta_x, float delta_y)
+{
+    float yaw_rate=1.f;
+    float pitch_rate=1.f;
+
+    mPosition -= mLookAt;
+    STMatrix4 m;
+    m.EncodeR(-1*delta_x*yaw_rate, mUp);
+    mPosition = m * mPosition;
+    m.EncodeR(-1*delta_y*pitch_rate, mRight);
+    mPosition = m * mPosition;
+
+    mPosition += mLookAt;
+}
 
 
 //------------------------------------------------------------------------------------
@@ -377,9 +423,9 @@ void SetUpEnvironmentMap(void)
     // eye is at (0,0,8)
     // center is at (0,0,0)
     // up is in positive Y direction 
-    gluLookAt(0.0, 0.0, 15.0, 
+    /*gluLookAt(0.0, 0.0, 15.0, 
               0.0, 0.0, 0.0,          
-              0.0, 1.0, 0.);          
+              0.0, 1.0, 0.);       */   
 
     // enable depth testing
     glEnable(GL_DEPTH_TEST);
@@ -431,7 +477,8 @@ void Setup()
     shader = NULL;
     envmapshader = NULL;
     reflectanceshader = NULL;
-    glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+    resetCamera();
 
 
     // this is the function that sets up the environment map
@@ -467,12 +514,12 @@ void ReflectanceMapping(void)
     // It is not needed for environmapping and needs
     // to be removed for enviorment mapping to work
     //---------------------------------------------------
-    gluPerspective( 35.0,  1.0, 1.0, 200.0);
+    /*gluPerspective( 35.0,  1.0, 1.0, 200.0);
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     gluLookAt(0.0, 0.0, 15.0, 
               0.0, 0.0, 0.0,          
-              0.0, 1.0, 0.);          
+              0.0, 1.0, 0.);    */      
     //--------------------------------------------------
 
 
@@ -521,6 +568,13 @@ void ReflectanceMapping(void)
 //--------------------------------------------------
 void DisplayCallback()
 {
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+    SetUpAndRight();
+
+    gluLookAt(mPosition.x,mPosition.y,mPosition.z,
+              mLookAt.x,mLookAt.y,mLookAt.z,
+              mUp.x,mUp.y,mUp.z);
     ReflectanceMapping();
 }
 
@@ -608,7 +662,22 @@ void ManipulationMode(int button, int state, int x, int y)
 //-------------------------------------------------
 void MouseCallback(int button, int state, int x, int y)
 {
-    ManipulationMode(button, state, x, y);  
+    if (button == GLUT_LEFT_BUTTON
+        || button == GLUT_RIGHT_BUTTON
+        || button == GLUT_MIDDLE_BUTTON)
+    {
+        gMouseButton = button;
+    } else
+    {
+        gMouseButton = -1;
+    }
+    
+    if (state == GLUT_UP)
+    {
+        gPreviousMouseX = -1;
+        gPreviousMouseY = -1;
+    }
+    //ManipulationMode(button, state, x, y);  
 }
 
 
@@ -617,7 +686,26 @@ void MouseCallback(int button, int state, int x, int y)
 //-------------------------------------------------
 void MouseMotionCallback(int x, int y)
 {
-    motion(x, y);
+     if (gPreviousMouseX >= 0 && gPreviousMouseY >= 0)
+    {
+        //compute delta
+        float deltaX = x-gPreviousMouseX;
+        float deltaY = y-gPreviousMouseY;
+        gPreviousMouseX = x;
+        gPreviousMouseY = y;
+        
+        //orbit, strafe, or zoom
+        if (gMouseButton == GLUT_LEFT_BUTTON)
+        {
+            RotateCamera(deltaX, deltaY);
+        }
+        
+    } else
+    {
+        gPreviousMouseX = x;
+        gPreviousMouseY = y;
+    }
+    //motion(x, y);
 }
 
 
@@ -728,16 +816,23 @@ int main(int argc, char** argv)
 #endif
 
     // callback functions
+    /*glutDisplayFunc(DisplayCallback);
+    glutReshapeFunc(ReshapeCallback);
+    glutKeyboardFunc(KeyCallback);
+    glutMouseFunc(MouseCallback);
+    glutMotionFunc(MouseMotionCallback);
+    glutIdleFunc(DisplayCallback);*/
+
+
+    // set  the scene
+    Setup();
+
     glutDisplayFunc(DisplayCallback);
     glutReshapeFunc(ReshapeCallback);
     glutKeyboardFunc(KeyCallback);
     glutMouseFunc(MouseCallback);
     glutMotionFunc(MouseMotionCallback);
     glutIdleFunc(DisplayCallback);
-
-
-    // set  the scene
-    Setup();
     
     // init display axes
     displayaxisx = 0;

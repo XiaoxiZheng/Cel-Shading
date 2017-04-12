@@ -125,30 +125,33 @@ void Camera::Orbit(float axis[4], float p1x, float p1y, float p2x, float p2y)
 //-----------------------------------------------------
 void Camera::RotateOrbit(float delta_x, float delta_y)
 {
-    //To change the speeds easily
-    m_yaw=1.f;
-    m_pitch=1.f;
-    
-    //Move the cam pos to the look at
-    m_Position -= m_LookAt;
+    //rotation amount
+    float rotateX = -delta_x/8;
+    float rotateY = -delta_y/8;
 
-    STMatrix4 m;
+    //move the camera to the lookat position
+     m_Position -= m_LookAt;
 
-    //Rotate around the up axis based on the vertical mouse movement
-    m.EncodeR(-1*delta_x*m_yaw, m_Up);
-    m_Position = m * m_Position;
+     //create a new matrix
+     STMatrix4 rotating;
+     //yaw rotation
+     rotating.EncodeR(rotateX, m_Up);
+     STVector3 holder = rotating * m_Position;
+     m_Position = holder;
 
-    //Rotate around the right axis base on the horizontal mouse movement
-    m.EncodeR(-1*delta_y*m_pitch, m_Right);
-    m_Position = m * m_Position;
+     //pitch rotation
+     rotating.EncodeR(rotateY, m_Right);
+     holder = rotating * m_Position;
+     m_Position = holder;
 
-    //Move the cam back to where it should be
-    m_Position += m_LookAt;
-
-    //Reset these
-    m_anglex = 0;
-    m_angley = 0;
+     //move the camera back to its original ditance from lookat position
+     m_Position += m_LookAt;
+    // these should be reset to 0
+ 
+     m_anglex = 0;
+     m_angley = 0;
 }
+
 
 
 //-----------------------------------------------------------------------
@@ -169,28 +172,32 @@ void Camera::RotateFly(float delta_x, float delta_y)
     //    - m_angley - tracks the latest small increment in the y angle for the mouse moves
     //    - m_LookAt - look at vector
     //-------------------------------------------------------------------------------
+ 
 
-    //Used to change the speed of movement
-    m_yaw=0.02f;
-    m_pitch=0.02f;
-    
-    //Move the lookAt Pos to the camera
-    m_LookAt -= m_Position;
+    //rotation amount
+    float rotateX = -delta_x/8;
+    float rotateY = -delta_y/8;
 
-    //Rotate the camera around the up based on horizontal mouse movement
-    STMatrix4 m;
-    m.EncodeR(1*delta_x*m_yaw, m_Up);
-    m_Position = m * m_Position;
+    //move the lookat to the camera position
+     m_LookAt -= m_Position;
 
-    //Rotate the camera around the right axis based on the vertical mouse movement
-    m.EncodeR(1*delta_y*m_pitch, m_Right);
-    m_Position = m * m_Position;
+     //create a new matrix
+     STMatrix4 rotating;
+     //yaw rotation
+     rotating.EncodeR(rotateX, m_Up);
+     STVector3 holder = rotating * m_LookAt;
+     m_LookAt = holder;
 
-    //Push the lookAt back out into world space
-    m_LookAt += m_Position;
+     //pitch rotation
+     rotating.EncodeR(rotateY, m_Right);
+     holder = rotating * m_LookAt;
+     m_LookAt = holder;
 
+     //move the lookat back to its original ditance from camera position
+     m_LookAt += m_Position;
     //-------------------------------------------------------------------------------
 }
+
 
 
 void Camera::Zoom(float delta_y)
@@ -215,12 +222,11 @@ void Camera::Zoom(float delta_y)
 //-------------------------------------------------------------
 void Camera::Strafe(float delta_x, float delta_y)
 {
-    float strafe_rate = 0.05f;
-    
-    m_Position -= strafe_rate * delta_x * m_Right;
-    m_LookAt   -= strafe_rate * delta_x * m_Right;
-    m_Position += strafe_rate * delta_y * m_Up;
-    m_LookAt   += strafe_rate * delta_y * m_Up;
+    m_Position -= delta_x * m_Right;
+    m_Position += delta_y * m_Up;
+
+    m_LookAt -= delta_x * m_Right;
+    m_LookAt += delta_y * m_Up;
 }
 
 
