@@ -144,6 +144,11 @@ STVector3 mLookAt;
 STVector3 mRight;
 STVector3 mUp;
 
+std::string meshOBJ;
+std::vector<STTriangleMesh*> myModel;
+std::pair<STPoint3,STPoint3> boundingBox;
+STPoint3 massCenter;
+
 void SetUpAndRight()
 {
     mRight = STVector3::Cross(mLookAt - mPosition, mUp);
@@ -351,7 +356,7 @@ void GenerateCubeMap(void)
 //-------------------------------------------------------------
 void GenerateTeaPotModel(GLint grid, GLdouble scale)
 {
-  float p[4][4][3], q[4][4][3], r[4][4][3], s[4][4][3];
+  /*float p[4][4][3], q[4][4][3], r[4][4][3], s[4][4][3];
   long i, j, k, l;
 
   glEnable(GL_AUTO_NORMAL);
@@ -396,7 +401,7 @@ void GenerateTeaPotModel(GLint grid, GLdouble scale)
         &s[0][0][0]);
       glEvalMesh2(GL_FILL, 0, grid, 0, grid);
     }
-  }
+  }*/
 }
 
 
@@ -484,6 +489,10 @@ void Setup()
     // this is the function that sets up the environment map
     SetUpEnvironmentMap();
 
+    STTriangleMesh::LoadObj(myModel,meshOBJ);
+    massCenter=STTriangleMesh::GetMassCenter(myModel);
+    boundingBox=STTriangleMesh::GetBoundingBox(myModel);
+
 }
 
 //----------------------------------------------------
@@ -541,11 +550,22 @@ void ReflectanceMapping(void)
     // If the left mouse button is down: displayangle, displayaxisx, displayaxisy, displayaxisz
     // specify the rotation angle and axis for spinning the model
     glMatrixMode(GL_MODELVIEW);
+    //glPushMatrix();
+    //glTranslatef(0.0, 0.0, -1.5); // move to position
+    //glRotatef(displayangle, displayaxisx, displayaxisy, displayaxisz); //  rotate around center
+    //glTranslatef(0.0, 0.0, 1.5); //move object to center
+    //GenerateTeaPotModel(5, 1.1);  // draw the teapot model
+    //glPopMatrix();
+
     glPushMatrix();
-    glTranslatef(0.0, 0.0, -1.5); // move to position
-    glRotatef(displayangle, displayaxisx, displayaxisy, displayaxisz); //  rotate around center
-    glTranslatef(0.0, 0.0, 1.5); //move object to center
-    GenerateTeaPotModel(5, 1.1);  // draw the teapot model
+    // MAke the model always scale to the same size.
+    STVector3 boundingSize=boundingBox.second-boundingBox.first;
+    float maxSize=(std::max)((std::max)(boundingSize.x,boundingSize.y),boundingSize.z);
+    glScalef(4.0f/maxSize,4.0f/maxSize,4.0f/maxSize);
+    glTranslatef(-massCenter.x,-massCenter.y,-massCenter.z);
+    for (int i = 0; i < myModel.size(); i++){
+        myModel[i]->Draw(true);
+    }
     glPopMatrix();
 
     //--------------------------------------------------
@@ -782,6 +802,7 @@ int main(int argc, char** argv)
     reflectionVertexShader          = std::string("kernels/reflectance.vert");
     vertexShader                    = std::string("kernels/default.vert");
     fragmentShader                  = std::string("kernels/phong.frag");
+    meshOBJ                         = std::string("../../data/meshes/teapot.obj");
 
 
     // TO DO: proj4_GLSLShaders
