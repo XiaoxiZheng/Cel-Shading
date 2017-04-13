@@ -796,8 +796,8 @@ int main(int argc, char** argv)
     // Shader files are specified here
     // No additional implementation required
     //------------------------------------------------------------------------------------
-    envmapFragmentShader            = std::string("kernels/envmap.frag");
-    envmapVertexShader              = std::string("kernels/envmap.vert");
+    envmapFragmentShader            = std::string("kernels/toon3color.frag");
+    envmapVertexShader              = std::string("kernels/toon.vert");
     reflectionFragmentShader        = std::string("kernels/reflectance.frag");
     reflectionVertexShader          = std::string("kernels/reflectance.vert");
     vertexShader                    = std::string("kernels/default.vert");
