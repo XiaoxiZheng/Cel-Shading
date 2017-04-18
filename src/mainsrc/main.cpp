@@ -190,6 +190,30 @@ void RotateCamera(float delta_x, float delta_y)
     mPosition += mLookAt;
 }
 
+void ZoomCamera(float delta_y)
+{
+    STVector3 direction = mLookAt - mPosition;
+    float magnitude = direction.Length();
+    direction.Normalize();
+    float zoom_rate = 0.1f*magnitude < 0.5f ? .1f*magnitude : .5f;
+    if(delta_y * zoom_rate + magnitude > 0)
+    {
+        mPosition += (delta_y * zoom_rate) * direction;
+    }
+    //std::cout<<"mLookAt(x,y,z): " << mLookAt.x <<","<< mLookAt.y <<","<< mLookAt.z <<std::endl;
+    //std::cout<<"mPosition(x,y,z): " << mPosition.x <<","<< mPosition.y <<","<< mPosition.z <<std::endl;
+    
+}
+
+void StrafeCamera(float delta_x, float delta_y)
+{
+    float strafe_rate = 0.05f;
+    
+    mPosition -= strafe_rate * delta_x * mRight;
+    mLookAt   -= strafe_rate * delta_x * mRight;
+    mPosition += strafe_rate * delta_y * mUp;
+    mLookAt   += strafe_rate * delta_y * mUp;
+}
 
 //------------------------------------------------------------------------------------
 // TO DO: Proj4_GLSLShaders
@@ -718,6 +742,14 @@ void MouseMotionCallback(int x, int y)
         if (gMouseButton == GLUT_LEFT_BUTTON)
         {
             RotateCamera(deltaX, deltaY);
+        }
+        else if (gMouseButton == GLUT_MIDDLE_BUTTON)
+        {
+            StrafeCamera(deltaX, deltaY);
+        }
+        else if (gMouseButton == GLUT_RIGHT_BUTTON)
+        {
+            ZoomCamera(deltaY);
         }
         
     } else
