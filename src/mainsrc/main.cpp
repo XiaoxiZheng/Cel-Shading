@@ -678,7 +678,26 @@ void KeyCallback(unsigned char key, int x, int y)
 
     glutPostRedisplay();
 }
-
+void SpecialKeyCallback(int key, int x, int y)
+{
+    switch(key) {
+        case GLUT_KEY_LEFT:
+            StrafeCamera(10,0);
+            break;
+        case GLUT_KEY_RIGHT:
+            StrafeCamera(-10,0);
+            break;
+        case GLUT_KEY_DOWN:
+            StrafeCamera(0,-10);
+            break;
+        case GLUT_KEY_UP:
+            StrafeCamera(0,10);
+            break;
+        default:
+            break;
+    }
+    glutPostRedisplay();
+}
 
 //-------------------------------------------------
 // sets the move flag true based on mouse position
@@ -847,7 +866,7 @@ int main(int argc, char** argv)
 
     // initialize display mode
     glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH);
-    glutCreateWindow("Program 4 GLSL Shaders");
+    glutCreateWindow("Cel-Shading");
 
 
     // Initialize GLUT and GLEW before
@@ -868,17 +887,10 @@ int main(int argc, char** argv)
     }
 #endif
 
-    // callback functions
-    /*glutDisplayFunc(DisplayCallback);
-    glutReshapeFunc(ReshapeCallback);
-    glutKeyboardFunc(KeyCallback);
-    glutMouseFunc(MouseCallback);
-    glutMotionFunc(MouseMotionCallback);
-    glutIdleFunc(DisplayCallback);*/
-
-
     // set  the scene
     Setup();
+
+    // callback functions
 
     glutDisplayFunc(DisplayCallback);
     glutReshapeFunc(ReshapeCallback);
@@ -886,7 +898,8 @@ int main(int argc, char** argv)
     glutMouseFunc(MouseCallback);
     glutMotionFunc(MouseMotionCallback);
     glutIdleFunc(DisplayCallback);
-    
+    glutSpecialFunc(SpecialKeyCallback);
+
     // init display axes
     displayaxisx = 0;
     displayaxisy = 0;
