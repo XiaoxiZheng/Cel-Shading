@@ -17,6 +17,8 @@ void main() {
 		color = vec4(1.0, 1.0, 1.0, 1.0) * mainColor;
 	else if (intensity > 0.4)
 		color = vec4(0.8, 0.8, 0.8, 1.0) * mainColor;
+	else if (intensity > 0.20)
+		color = vec4(0.6, 0.6, 0.6, 1.0) * mainColor;
 	else if (intensity > 0.10)
 		color = vec4(0.5, 0.5, 0.5, 1.0) * mainColor;
 	else
@@ -29,7 +31,7 @@ void main() {
 
 	if (angle > 65){
 		color = vec4(0.0,0.0,0.0,1.0);
-		
+	
 	}
 
 	gl_FragColor = color;

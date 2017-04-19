@@ -51,6 +51,8 @@ void SpinObject(float axis[4], float p1x, float p1y, float p2x, float p2y);
 void drawskybox();
 unsigned int skybox[6];
 void RotateObject(float delta_x, float delta_y);
+int ToonMode = 2;
+
 
 
 //-----------------------------------
@@ -78,14 +80,15 @@ float lightPosition[] = {10.0f, 15.0f, 10.0f, 1.0f};
 // All the shader names and
 // shader programs you will need are declared here
 //---------------------------------------------
-std::string envmapFragmentShader;
-std::string envmapVertexShader;
+std::string ToonFragmentShader;
+std::string ToonVertexShader;
+
 std::string reflectionFragmentShader;
 std::string reflectionVertexShader;
 std::string vertexShader;
 std::string fragmentShader;
 STShaderProgram *shader;
-STShaderProgram *envmapshader;
+STShaderProgram *toonshader;
 STShaderProgram *reflectanceshader;
 
 
@@ -475,9 +478,10 @@ void SetUpEnvironmentMap(void)
     //----------------------------------------
 
     //GenerateCubeMap();
-    envmapshader = new STShaderProgram();
-    envmapshader->LoadVertexShader(envmapVertexShader);
-    envmapshader->LoadFragmentShader(envmapFragmentShader);
+    toonshader = new STShaderProgram();
+    toonshader->LoadVertexShader(ToonVertexShader);
+    toonshader->LoadFragmentShader(ToonFragmentShader);
+   
 
 }
 
@@ -491,6 +495,8 @@ void SetUpEnvironmentMap(void)
 //----------------------------------------------------------------
 void Setup()
 {
+
+myModel.clear();
     // reset everything
     //-----------------------------------------------
     glDisable (GL_TEXTURE_CUBE_MAP);
@@ -499,12 +505,12 @@ void Setup()
     glDisable(GL_TEXTURE_GEN_R);
     if(shader)
         delete(shader);
-    if(envmapshader)
-        delete(envmapshader);
+    if(toonshader)
+        delete(toonshader);
     if(reflectanceshader)
         delete(reflectanceshader);
     shader = NULL;
-    envmapshader = NULL;
+    toonshader = NULL;
     reflectanceshader = NULL;
     glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
     resetCamera();
@@ -514,6 +520,7 @@ void Setup()
     SetUpEnvironmentMap();
 
     STTriangleMesh::LoadObj(myModel,meshOBJ);
+
     massCenter=STTriangleMesh::GetMassCenter(myModel);
     boundingBox=STTriangleMesh::GetBoundingBox(myModel);
 
@@ -560,11 +567,11 @@ void ReflectanceMapping(void)
     // TO DO: Proj4_GLSLShaders
     // This function displays the environment mapped object.
     // To complete this function, add code that will ...
-    // 1. bind the reflectanceshader shader and the envmapshader
+    // 1. bind the reflectanceshader shader and the toonshader
     // 2. draw the skybox - drawskybox()
     // bind shaders and draw sky box here before the draw code below
     // ----------------------------------------------------------
-        envmapshader->Bind();
+        toonshader->Bind();
     //-----------------------------------------------------------
 
 
@@ -597,7 +604,7 @@ void ReflectanceMapping(void)
     // 3. you must determine the correct order to bind and unbind
     //   your shaders and textures.
     //----------------------------------------------------------
-    	envmapshader->UnBind();
+    	toonshader->UnBind();
     //----------------------------------------------------------
 
     // done with front frame buffer so swap to 
@@ -641,7 +648,25 @@ void ReshapeCallback(int w, int h)
     glViewport(0, 0, gWindowSizeX, gWindowSizeY);
 
 }
-
+void UpdateToon(){
+        if (ToonMode == 2){
+            ToonFragmentShader            = std::string("kernels/toon2color.frag");
+        }
+         else if( ToonMode == 3){
+            ToonFragmentShader            = std::string("kernels/toon3color.frag");
+         }
+          else if(ToonMode == 4){
+            ToonFragmentShader            = std::string("kernels/toon4color.frag");
+          }  
+          else if(ToonMode == 5){
+            ToonFragmentShader            = std::string("kernels/toon5color.frag");
+          }
+          else {
+            ToonFragmentShader            = std::string("kernels/toon6color.frag");
+          }
+       
+            SetUpEnvironmentMap();
+}
 //-------------------------------------------------
 // Processes key press events
 //-------------------------------------------------
@@ -669,9 +694,48 @@ void KeyCallback(unsigned char key, int x, int y)
         case 'q': {
             exit(0);
         }
+        break;
 
+        case 'm': {
+            
+            if(ToonMode < 6){
+               ToonMode = ToonMode+1; 
+               UpdateToon();
+            }
+            
+            
+        } break;
+        case 'n': {
+            
+            if(ToonMode > 2){
+               ToonMode--; 
+               UpdateToon();
+            }
+            
+        }
+        break;
 
-
+        case '1' : {
+              meshOBJ                         = std::string("../../data/meshes/Leon.obj");
+              Setup();
+        }
+        break;
+        case '2' : {
+              meshOBJ                         = std::string("../../data/meshes/cactus.obj");
+              Setup();
+        }
+        break;
+        case '3' : {
+              meshOBJ                         = std::string("../../data/meshes/Dragon.obj");
+              Setup();
+        }
+        break;
+        case '4' : {
+              meshOBJ                         = std::string("../../data/meshes/deer.obj");
+              Setup();
+        }
+        break;
+       
         default:
             break;
     }
@@ -698,6 +762,7 @@ void SpecialKeyCallback(int key, int x, int y)
     }
     glutPostRedisplay();
 }
+
 
 //-------------------------------------------------
 // sets the move flag true based on mouse position
@@ -847,13 +912,15 @@ int main(int argc, char** argv)
     // Shader files are specified here
     // No additional implementation required
     //------------------------------------------------------------------------------------
-    envmapFragmentShader            = std::string("kernels/toon3color.frag");
-    envmapVertexShader              = std::string("kernels/toon.vert");
+    ToonFragmentShader            = std::string("kernels/toon2color.frag");
+    ToonVertexShader              = std::string("kernels/toon.vert");
+   
     reflectionFragmentShader        = std::string("kernels/reflectance.frag");
     reflectionVertexShader          = std::string("kernels/reflectance.vert");
     vertexShader                    = std::string("kernels/default.vert");
     fragmentShader                  = std::string("kernels/phong.frag");
-    meshOBJ                         = std::string("../../data/meshes/teapot.obj");
+    meshOBJ                         = std::string("../../data/meshes/Dragon.obj");
+    
 
 
     // TO DO: proj4_GLSLShaders
